@@ -1,0 +1,14 @@
+read_json:
+  op_name: "regular_path_reader"
+  input_path: "./tests/pipeline/test_data/json/traditional_zh.json"
+  format: "json"
+  output_df: "input_df"
+t2s:
+  op_name: "chinese_traditional_to_simple_mapper"
+  input_df: "input_df"
+  output_df: "t2s_df"
+  field: "content"
+  output_field: "t2s_content"
+  select:
+    - t2s_content
+  show: true

@@ -1,0 +1,14 @@
+read_json:
+  op_name: "regular_path_reader"
+  input_path: "./tests/pipeline/test_data/json/zh_tokenizer.json"
+  format: "json"
+  output_df: "input_df"
+t2s:
+  op_name: "jieba_chinese_tokenizer_mapper"
+  input_df: "input_df"
+  output_df: "output_df"
+  field: "content"
+  select:
+    - tokens
+  output_field: "tokens"
+  show: true

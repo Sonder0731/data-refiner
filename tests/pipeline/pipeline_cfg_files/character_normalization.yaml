@@ -1,0 +1,12 @@
+input:
+  op_name: "regular_path_reader"
+  input_path: "tests/pipeline/test_data/json/character_normalization.json"
+  format: "json"
+  output_df: "input_df"
+t2s:
+  op_name: "character_normalization_mapper"
+  input_df: "input_df"
+  output_df: "cn_df"
+  field: "content"
+  output_field: "content"
+  show: true

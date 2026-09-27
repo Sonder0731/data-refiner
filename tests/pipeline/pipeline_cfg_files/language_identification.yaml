@@ -1,0 +1,15 @@
+read_file:
+  op_name: "regular_path_reader"
+  input_path: "./tests/pipeline/test_data/json/three_diff_language.json"
+  output_df: "input_df"
+  format: "json"
+language_identifier:
+  op_name: "language_identification_mapper"
+  input_df: "input_df"
+  output_df: "language_identification.df"
+  field: "text"
+  output_field: "language"
+  select:
+    - language
+    - __id__
+  show: true

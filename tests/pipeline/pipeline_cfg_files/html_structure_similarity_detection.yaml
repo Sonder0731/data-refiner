@@ -1,0 +1,20 @@
+read_whole_text_file:
+  op_name: "whole_text_file_reader"
+  input_path: "./tests/pipeline/test_data/html"
+  output_df: "input_df"
+  show: true
+css_extactor:
+  op_name: "css_extraction_mapper"
+  input_df: "input_df"
+  output_df: "css_df"
+  field: "text"
+  output_field: "css"
+  show: true
+minhash_dedup:
+  op_name: "minhash_lsh_deduplicator"
+  input_df: "css_df"
+  field: "css"
+  ev_partitions: 1
+  threshold: 0.5
+  output_df: "no_similarity_df"
+  show: true

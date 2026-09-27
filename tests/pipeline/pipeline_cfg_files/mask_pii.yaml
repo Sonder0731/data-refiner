@@ -1,0 +1,22 @@
+read_json:
+  op_name: "regular_path_reader"
+  input_path: "./tests/pipeline/test_data/json/pii.json"
+  format: "json"
+  output_df: "input_df"
+mask_pii:
+  op_name: "mask_pii_mapper"
+  input_df: "input_df"
+  output_df: "output_df"
+  mask_map:
+    PHONE_NUMBER:
+      type: "replace"
+      new_value: "[US_PHONE_NUMBER_MASK]"
+    ZH_ID_CARD:
+    ZH_PHONE_NUMBER:
+    ZH_LANDLINE_NUMBER:
+    URL:
+  field: "content"
+  output_field: "mask_content"
+  show: true
+  select:
+    - mask_content

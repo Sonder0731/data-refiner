@@ -1,0 +1,124 @@
+[project]
+name = "data-refiner-pyspark"
+version = "1.0.0"
+description = "A PySpark-based big data processing framework with pipeline support."
+authors = [
+    { name = "Sonder0731", email = "sonderbanana@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+
+dependencies = [
+    "numpy<2.0.0",
+    "editdistance>=0.8.1",
+    "fasttext-wheel>=0.9.2",
+    "graphframes>=0.6",
+    "jieba>=0.42.1",
+    "loguru>=0.7.3",
+    "opencc>=1.1.9",
+    "pandas>=2.3.1",
+    "pydantic>=2.11.7",
+    "pyspark==3.5.2",
+    "pyyaml>=6.0.2",
+    "trafilatura>=2.0.0",
+    "wget>=3.2",
+    "pyahocorasick>=2.2.0",
+    "orjson>=3.11.3",
+    "fastwarc==0.15.2",
+    "psutil>=7.0.0",
+    "scipy>=1.13.1",
+    "parsel>=1.10.0",
+    "xxhash>=3.5.0",
+    "textdescriptives==2.8.4",
+    "tenacity>=9.1.2",
+    "json-repair>=0.44.1",
+    "presidio-analyzer>=2.2.360",
+    "presidio-anonymizer>=2.2.360",
+    "curl-cffi>=0.13.0",
+    "pybloom-live>=4.0.0",
+    "furl>=2.1.4",
+    "nltk==3.9.4",
+    "docstring-parser>=0.17.0",
+    "python-dotenv>=1.2.1",
+    "pillow>=12.0.0",
+    "tomli>=2.3.0",
+    "pyarrow>=22.0.0",
+    "pydub>=0.25.1",
+    "librosa>=0.11.0",
+    "pipreqs>=0.5.0",
+    "datefinder==0.7.3",
+    "scikit-learn>=1.7.2",
+    "pydantic-settings>=2.12.0",
+    "litellm>=1.83.0",
+    "botocore>=1.43.16",
+    "tqdm>=4.67.3",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.9.0",
+    "pip>=25.2",
+    "pytest>=8.4.1",
+    "pytest-watch>=4.2.0",
+    "ruff>=0.14.9",
+]
+
+[tool.black]
+line-length = 100
+skip-string-normalization = true
+target-version = ["py311"]
+
+[build-system]
+requires = ["hatchling", "uv>=0.1.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+include = ["data_refiner", "docs","tests/ops"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["data_refiner"]
+force-include = { "docs" = "data_refiner/docs" ,"tests/ops"="data_refiner/tests/ops"}
+
+[[tool.uv.index]]
+name = "torch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+    { index = "torch-cpu"},
+]
+
+
+[tool.ruff]
+lint.select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # isort
+    "D",    # pydocstyle
+    "D401", # First line should be in imperative mood
+    "T201",
+    "UP",
+]
+lint.ignore = [
+    "UP006",
+    "UP007",
+    "UP035",
+    "D417",
+    "E501",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[project.scripts]
+# for dependency
+dr_init = "data_refiner.env_init:init"
+dr_pack_resources = "data_refiner.env_init:zip_dependency"
+dr_check_docs = "doc_checker:main"
+dr_export_dependency = "export_dependency:main"
+
+[project.urls]
+Homepage = "https://github.com/Sonder0731/data-refiner"
+Repository = "https://github.com/Sonder0731/data-refiner"
+Issues = "https://github.com/Sonder0731/data-refiner/issues"

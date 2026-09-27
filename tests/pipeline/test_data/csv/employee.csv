@@ -1,0 +1,16 @@
+user_id,name,age,gender,city,province,hometown,education,income,profession,register_time,last_login,phone,email,device_brand,app_version,annual_cost,category_fav,score_math,score_english
+U001,Li Hua,22,M,杭州,浙江,河南,Bachelor,85000,Engineer,2023-02-12,2025-01-08,13800001111,lihua@example.com,Huawei,5.2.1,3200,news,88,92
+U002,Wang Lei,29,F,杭州,浙江,河南,Master,120000,Designer,2022-11-03,2025-01-06,13900002222,,Apple,5.2.1,5800,finance,76,85
+U003,Zhang Ming,19,M,上海,上海,安徽,HighSchool,45000,Student,2024-01-18,2025-01-09,13700003333,zhangming@example.com,Xiaomi,5.1.0,900,games,90,78
+U004,Zhao Yun,34,M,深圳,广东,四川,Bachelor,150000,Engineer,2021-09-21,2025-01-01,13600004444,zhaoyun@example.com,Huawei,5.3.0,7200,tech,85,80
+U005,Chen Fang,27,F,成都,四川,四川,College,60000,Teacher,2023-03-30,2025-01-09,,chenfang@example.com,OPPO,5.2.0,2000,education,70,65
+U006,Liu Jie,30,F,广州,广东,湖南,Master,130000,ProductManager,2022-01-20,2025-01-02,13500005555,,Apple,5.2.1,5400,travel,92,88
+U007,Sun Qiang,24,M,杭州,浙江,河南,Bachelor,90000,Engineer,2023-05-11,2025-01-08,13400006666,sunqiang@example.com,Huawei,5.2.1,3800,video,83,81
+U008,Liang Yu,31,F,北京,北京,河北,Master,160000,DataScientist,2021-12-02,2025-01-06,13300007777,liangyu@example.com,Apple,5.3.1,8500,tech,95,97
+U009,Xu Dong,18,M,西安,陕西,河南,HighSchool,30000,Student,2024-04-15,2025-01-09,,xudong@example.com,Xiaomi,5.1.2,600,sports,75,60
+U010,Guo Mei,28,F,杭州,浙江,江苏,Bachelor,98000,Sales,2023-07-19,2025-01-05,13200008888,,Vivo,5.2.1,2600,fashion,82,79
+U011,Qin Hao,40,M,南京,江苏,江苏,Master,180000,Manager,2020-05-12,2025-01-03,13100009999,qinhao@example.com,Apple,5.0.8,9100,finance,88,86
+U012,Wu Li,21,F,武汉,湖北,湖北,Bachelor,55000,Student,2024-01-07,2025-01-08,13000001010,,Huawei,5.2.0,1200,anime,72,80
+U013,Hu Kai,26,M,杭州,浙江,河南,College,70000,Driver,2023-02-03,2025-01-09,13988889999,hukai@example.com,Xiaomi,5.2.1,1500,lifestyle,65,58
+U014,Song Lin,33,F,重庆,重庆,贵州,Master,125000,Engineer,2021-10-12,2025-01-04,13877778888,songlin@example.com,Huawei,5.3.0,6700,tech,91,89
+U015,Tang Fei,23,M,杭州,浙江,河南,Bachelor,95000,Engineer,2023-06-11,2025-01-08,,tangfei@example.com,Apple,5.2.1,4100,news,87,84

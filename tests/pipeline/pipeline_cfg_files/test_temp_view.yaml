@@ -1,0 +1,14 @@
+input:
+  op_name: "regular_path_reader"
+  input_path: "tests/pipeline/test_data/csv/employee.csv"
+  format: "csv"
+  output_df: "input_df"
+  options:
+    header: true
+  temp_view_name: "input_view"
+select:
+  op_name: "spark_sql_executor"
+  input_df: "input_df"
+  output_df: "output_df"
+  sql_query: "SELECT * FROM input_view"
+  show: true

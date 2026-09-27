@@ -1,0 +1,16 @@
+input2:
+  op_name: "regular_path_reader"
+  input_path: "./tests/pipeline/test_data/json/edit_distance.json"
+  format: "json"
+  output_df: "input_df"
+edit_distance_mapper:
+  op_name: "edit_distance_mapper"
+  input_df: "input_df"
+  output_df: "edit_distance_df"
+  fields:
+    - content1
+    - content2
+  output_field: "edit_distance"
+  select:
+    - edit_distance
+  show: true
